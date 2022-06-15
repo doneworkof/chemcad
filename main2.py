@@ -10,23 +10,6 @@ from reactions import reactcore
 from MendeleevTable import from_label
 from toolkit import soulbility_table
 
-"""
-
-app = App({
-    'start': StartScene(title='Добро пожаловать!'),
-    'login': LoginScene(title='Вход в аккаунт'),
-    'register': RegisterScene(title='Регистрация'),
-    'main': MainScene(title='Главная страница'),
-    'inspect_others_drive': InspectOthersDriveScene(),
-    'browse': BrowseScene(title='Найденные пользователи'),
-    'inspect_my_drive': InspectMyDriveScene(title='Список ваших файлов'),
-    'settings': SettingsScene(title='Настройки профиля')
-}, 'dwdrive_client')
-
-
-app('start')
-
-"""
 
 class StartScene(Scene):
     def main(self):
@@ -80,20 +63,7 @@ class CalculatorScene(Scene):
                 raise e
                 alert(f'Ошибка неизвестного характера. Сообщение: {e.args[0]}')
 
-'''Ещё баг
-смотрел справочные материалы?
-Да, там всё работает
-] O2 + H2
-Реакция успешно прошла!
-Молекулярное уравнение:
-O2 -> 2H2O
-# Введите выражение:
-] H2 + O2
-Реакция успешно прошла!
-Молекулярное уравнение:
-H2 -> 2H2O
-# Введите выражение:
-'''
+
 class InfoScene(Scene):
     def main(self):
         ch = choice([
